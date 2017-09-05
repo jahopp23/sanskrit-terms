@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sanskrit Terms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sanskrit_terms.each do |sanskrit_term| %>
+   
+      <tr>
+        <td><strong><%= sanskrit_term.term %></strong></td>
+        <td><%= sanskrit_term.definition %></td>
+        <td><%= link_to 'Show', sanskrit_term %></td>
+        <td><%= link_to 'Edit', edit_sanskrit_term_path(sanskrit_term) %></td>
+        <td><%= link_to 'Destroy', sanskrit_term, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sanskrit Term', new_sanskrit_term_path %>

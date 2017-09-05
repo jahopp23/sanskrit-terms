@@ -1,0 +1,2 @@
+module SanskritTermsHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @sanskrit_term.term %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @sanskrit_term.definition %>
+</p>
+
+<%= link_to 'Edit', edit_sanskrit_term_path(@sanskrit_term) %> |
+<%= link_to 'Back', sanskrit_terms_path %>
